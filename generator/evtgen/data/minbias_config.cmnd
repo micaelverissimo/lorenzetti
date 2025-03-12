@@ -13,20 +13,26 @@ Beams:eCM = 14000.                 ! CM energy of collision
 
 
 ! 4) Settings for the hard-process generation.
-SoftQCD:all = on                   ! Turn on soft QCD
-!SoftQCD:nonDiffractive = on       ! Turn on nonDiffractive
+SoftQCD:all = on                   ! Turn on soft QCD 
+SigmaTotal:mode = 2
+SigmaDiffractive:mode = 2
 
 
-! 5) Switch on/off the key event generation steps.
-!PartonLevel:MPI = on              ! with multiparton interactions
-!PartonLevel:ISR = on              ! with initial-state radiation
-!PartonLevel:FSR = on              ! with final-state radiation
-!HadronLevel:Hadronize = on        ! with hadronization
-!HadronLevel:Decay = on            ! with decays
+! 5) Addition of Underlying Event
 
-! 6) Other settings. Can be expanded as desired.
+
+! 6) Switch on/off the key event generation steps.
+PartonLevel:MPI = on              ! with multiparton interactions
+PartonLevel:ISR = on              ! with initial-state radiation
+PartonLevel:FSR = on              ! with final-state radiation
+HadronLevel:Hadronize = on        ! with hadronization
+HadronLevel:Decay = on            ! with decays
+
+! 7) Other settings. Can be expanded as desired.
 PDF:pSet = 13                      ! This is the default and the base tune employed on ATLAS: NNPDF2.3 QCD+QED LO alpha_s(M_Z) = 0.130
+Tune:pp  = 7
+Tune:ee  = 7
 
-! 7) Set random seed
+! 8) Set random seed
 Random:setSeed = on                ! Set the random seed
 Random:seed = 10000002             ! to this value
